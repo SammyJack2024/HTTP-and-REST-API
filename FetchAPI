@@ -1,0 +1,27 @@
+**Fetch API**
+Fetch API is a set of built-in functions and tools that we can use when we are writing JavaScript code in order to make HTTP requests.
+
+const response = await fetch(url, settings);
+const responseData = await response.json();
+
+## Full Example
+
+async function getUsers() {  
+  const response = await fetch("https://api.example.com/users");  
+  
+  if (!response.ok) {  
+    throw new Error("Request failed");  
+  }  
+  
+  const data = await response.json();  
+  console.log(data);  
+}
+
+---
+
+## 🔹 Key Takeaways
+
+- `fetch()` → sends request
+- `response` → metadata + raw body
+- `.json()` → converts response into usable data
+- Always use `await` twice
