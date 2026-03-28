@@ -1,1 +1,1 @@
-THis was focus on new questions
+This was focus on new questions
