@@ -26,6 +26,14 @@ async function getData<T>(url: string): Promise<T> {
   return response.json();
 }
 
+// async → This means the function works with asynchronous operations (like network requests).
+<T> (Generic Type) → This lets you decide the type of data the function will return.
+url: string → The function takes a URL as input.
+Promise<T> → It returns a promise that resolves to type T.
+
+👉 In simple terms:
+“This function fetches data from a URL and returns it in whatever type you expect.”
+
 function generateKey(): string {
   const characters = "ABCDEF0123456789";
   let result = "";
