@@ -41,6 +41,25 @@ function logIssues(issues: Issue[]): void {
 
 There is an error in this code. Figure it out and correct it.
 
+Answer
+
+The Fix
+You need to change the variable you are passing into getData. Instead of using testURL, you should use issueURL, which contains the actual API link for Boot.dev.
+
+Change this line:
+
+TypeScript
+const issues = await getData<Issue[]>(testURL);
+To this:
+
+TypeScript
+const issues = await getData<Issue[]>(issueURL);
+
+Why this was breaking:
+The Wrong Map: testURL is set to "http://why.wont.it.fetch". Since that isn't a real website, the fetch command inside your helper function will fail because it can't find the server.
+
+The Correct Map: issueURL is set to the real address: "https://api.boot.dev/v1/courses_rest_api/learn-http/issues". This is where the "toy box" full of issues actually is!
+
 
 
 
